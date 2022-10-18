@@ -30,3 +30,23 @@ let randomNo_3 = drand48() //0.0~1.0까지 난 수생성
 let ranomNo_4 = Int.random(in: 0..<9)       //0~8까지 난수 생성
 let randomNo_5 = Double.random(in: 0.0...10.0)  //0.0~10.0까지 난수 생성
 ```
+
+## HTTP 체크 및 추가
+URL 형태의 String에서 "http://" 가 있는지 체크 후, 자동으로 추가한다.
+함수 또는 확장해서 사용할 수 있다.
+
+### 사용법
+```swift
+let urlWithHttp:String = addHTMLAuto(urlStr)
+
+//'http://' 자동 삽입
+func addHTMLAuto(_ url:String) -> String {
+    var strUrl = url
+    let flag = strUrl.hasPrefix("http://")
+    if (!flag) {
+        strUrl = "http://" + strUrl
+    }
+    
+    return strUrl
+}
+```
