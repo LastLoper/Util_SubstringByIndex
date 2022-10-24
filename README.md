@@ -50,3 +50,28 @@ func addHTMLAuto(_ url:String) -> String {
     return strUrl
 }
 ```
+
+## PrefetchingDataSource In TableView
+네트워크 통신으로 페이징 단위 데이터를 받아오는 경우, 스크롤 마지막 부분에서 다음 페이지 데이터를 요청하는 방법이다.
+
+### 사용법
+```swift
+var currentPage = 1
+
+override func viewDidLoad() {
+    ...
+    tableView.prefetchDataSource = self
+}
+
+extension VC: UITableViewDataSourcePrefetching {
+        func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard self.currentPage != 1 else { return }
+        
+        indexPaths.forEach({
+            if ($0.row + 1)/<한 페이지 데이터 개수> + 1 == self.currentPage {
+                self.fetchData(of: self.currentPage)
+            }
+        })
+    }
+}
+```
