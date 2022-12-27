@@ -75,3 +75,25 @@ extension VC: UITableViewDataSourcePrefetching {
     }
 }
 ```
+
+## 키패드 상태 감지
+NotificationCenter를 이용한, 키패드가 올라온 상태인지 아닌지 감지하고 각 이벤트를 처리할 수 있다.
+```swift
+//키패드가 올라온 것을 감지
+NotificationCenter.default.addObserver(
+    self,
+    selector: #selector(self.keyboardWillShow),
+    name: UIResponder.keyboardWillShowNotification,
+    object: nil
+)
+    
+//키보드가 내려간 것을 감지
+NotificationCenter.default.addObserver(
+    self,
+    selector: #selector(self.keyboardWillHide),
+    name: UIResponder.keyboardWillHideNotification,
+    object:nil
+)
+```
+
+
