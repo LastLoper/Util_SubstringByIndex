@@ -96,4 +96,7 @@ NotificationCenter.default.addObserver(
 )
 ```
 
-
+## 한글이 깨지지 않고 서버로 전달될 수 있도록 해주는 메서드
+```swift
+addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+```
