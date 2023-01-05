@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawLineAt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView의 위쪽만 테두리 그리기" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6HF-UQ-FzJ">
+                                <rect key="frame" x="25" y="97" width="340" height="125"/>
+                                <color key="backgroundColor" red="0.53980222659999999" green="0.76041336930000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="p5w-D5-Jbo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TextField의 왼쪽과 오른쪽 테두리 그리기" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-R4-7rC">
+                                <rect key="frame" x="25" y="287" width="340" height="34"/>
+                                <color key="backgroundColor" red="0.56508100055225596" green="1" blue="0.57269845598582914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 아래쪽만 테두리 그리기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-U7-qVP">
+                                <rect key="frame" x="25" y="386" width="340" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.8907007252778486" blue="0.2599259183903051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVj-Rp-dGX">
+                                <rect key="frame" x="158" y="500.00000000000006" width="55.666666666666657" height="55.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AVj-Rp-dGX" secondAttribute="height" id="WF3-6u-jLR"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZd-R4-7rC" secondAttribute="trailing" constant="25" id="DD8-Vw-899"/>
+                            <constraint firstItem="aZd-R4-7rC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="G6b-vo-XhB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z1e-U7-qVP" secondAttribute="trailing" constant="25" id="J6m-sZ-Te8"/>
+                            <constraint firstItem="aZd-R4-7rC" firstAttribute="top" secondItem="6HF-UQ-FzJ" secondAttribute="bottom" constant="65" id="Rsy-xO-ufM"/>
+                            <constraint firstItem="AVj-Rp-dGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="VfM-2e-dXH"/>
+                            <constraint firstItem="z1e-U7-qVP" firstAttribute="top" secondItem="aZd-R4-7rC" secondAttribute="bottom" constant="65" id="ZJD-xI-5eG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVj-Rp-dGX" secondAttribute="trailing" constant="176.33333333333334" id="ba8-GX-mpu"/>
+                            <constraint firstItem="z1e-U7-qVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iui-Po-1i2"/>
+                            <constraint firstItem="6HF-UQ-FzJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qV1-b0-QGO"/>
+                            <constraint firstItem="AVj-Rp-dGX" firstAttribute="top" secondItem="z1e-U7-qVP" secondAttribute="bottom" constant="93" id="rDZ-bW-6Qi"/>
+                            <constraint firstItem="6HF-UQ-FzJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="yUj-3y-iKV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6HF-UQ-FzJ" secondAttribute="trailing" constant="25" id="z9y-b1-oDR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBtn" destination="AVj-Rp-dGX" id="lzp-Hu-U75"/>
+                        <outlet property="label" destination="z1e-U7-qVP" id="YNG-q9-YUK"/>
+                        <outlet property="textField" destination="aZd-R4-7rC" id="8B5-Ig-caS"/>
+                        <outlet property="textView" destination="6HF-UQ-FzJ" id="Gaa-dX-Tr9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
